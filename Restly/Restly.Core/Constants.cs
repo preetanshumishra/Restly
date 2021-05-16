@@ -6,7 +6,7 @@
         {
             public const int ApiTimeOut = 90;
 
-            public const string BaseApiUrl = "api";
+            public const string BaseApiUrl = "https://restly.deventure.ro/api";
 
             public static string BaseRestaurantUrl = $"{BaseApiUrl}/Restaurant";
             public static string InitRestaurantUrl = $"{BaseRestaurantUrl}/InitRestaurants";

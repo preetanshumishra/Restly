@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Restly.Core.Models
 {
-    public class ProductDataModel
+    public class ProductDataModel : BindableBase
     {
         public long Id { get; set; }
         public string Name { get; set; }

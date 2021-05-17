@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Restly.Core.Models
 {
-    public class MenuItem
+    public class MenuItem : BindableBase
     {
         public long Id { get; set; }
         public string Title { get; set; }

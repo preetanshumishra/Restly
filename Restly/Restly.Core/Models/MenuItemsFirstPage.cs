@@ -2,7 +2,7 @@
 
 namespace Restly.Core.Models
 {
-    public class MenuItemsFirstPage
+    public class MenuItemsFirstPage : BindableBase
     {
         public List<MenuItem> Data { get; set; }
         public long TotalPages { get; set; }

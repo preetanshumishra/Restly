@@ -1,6 +1,6 @@
 ﻿namespace Restly.Core.Models
 {
-    public class RestaurantModel
+    public class RestaurantModel : BindableBase
     {
         public string Categories { get; set; }
         public double Rating { get; set; }

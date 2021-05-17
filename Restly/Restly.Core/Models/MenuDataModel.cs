@@ -2,7 +2,7 @@
 
 namespace Restly.Core.Models
 {
-    public class MenuDataModel
+    public class MenuDataModel : BindableBase
     {
         public MenuItemsFirstPage MenuItemsFirstPage { get; set; }
         public List<MenuCategory> MenuCategories { get; set; }

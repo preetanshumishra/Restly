@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using Restly.Core.Exceptions;
+using Restly.Core.Models;
 using Restly.Core.Services.Abstractions;
 
 namespace Restly.Core.Services.Implementations
@@ -227,12 +228,16 @@ namespace Restly.Core.Services.Implementations
             return result;
         }
 
-        private void HandleResponseAsync(HttpResponseMessage response)
+        private async Task HandleResponseAsync(HttpResponseMessage response)
         {
             if (response.IsSuccessStatusCode)
             {
                 return;
             }
+
+            var serializedResponse = await response.Content.ReadAsStringAsync();
+
+            var result = await Task.Run(() => JsonConvert.DeserializeObject<RestlyResponseModel<object>>(serializedResponse, _serializerSettings));
 
             if (response.StatusCode == HttpStatusCode.Forbidden)
             {

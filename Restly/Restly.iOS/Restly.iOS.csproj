@@ -135,6 +135,7 @@
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="IosSetup.cs" />
+        <Compile Include="Views\BaseViewController.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Restly.Core\Restly.Core.csproj">

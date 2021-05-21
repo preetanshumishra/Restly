@@ -9,6 +9,6 @@ namespace Restly.Core.Services.Abstractions
 
         Task<RestaurantDataModel> GetMenuList();
 
-        Task<RestaurantDataModel> GetProductById();
+        Task<RestaurantDataModel> GetProductById(string productId);
     }
 }

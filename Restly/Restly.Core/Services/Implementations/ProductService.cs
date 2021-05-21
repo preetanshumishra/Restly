@@ -7,6 +7,20 @@ namespace Restly.Core.Services.Implementations
 {
     public class ProductService : BaseApiService, IProductService
     {
+        public Task<RestaurantDataModel> InitRestaurantMenu()
+        {
+            try
+            {
+                //return RestApiClient.GetAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return null;
+        }
+
         public Task<RestaurantDataModel> GetMenuList()
         {
             try
@@ -21,21 +35,7 @@ namespace Restly.Core.Services.Implementations
             return null;
         }
 
-        public Task<RestaurantDataModel> GetProductById()
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return null;
-        }
-
-        public Task<RestaurantDataModel> InitRestaurantMenu()
+        public Task<RestaurantDataModel> GetProductById(string productId)
         {
             try
             {
